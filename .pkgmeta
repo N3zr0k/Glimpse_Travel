@@ -1,0 +1,27 @@
+# Ein Addon-Ordner im Repo (Glimpse_Travel/), alles andere liegt daneben. Der Packager baut im Ordner Glimpse_Travel, schiebt den
+# Inhalt des Addon-Ordners eine Ebene hoch; was außen liegt, bleibt über "ignore" draußen.
+package-as: Glimpse_Travel
+
+move-folders:
+  Glimpse_Travel/Glimpse_Travel: Glimpse_Travel
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
+# Beziehungen auf CurseForge (Kurznamen der Projekte); externe Addons werden nicht gemeldet
+required-dependencies:
+  - glimpse
+
+ignore:
+  - tests
+  - tools
+  - docs
+  - .github
+  - .luacheckrc
+  - .gitattributes
+  - .gitignore
+  - README.md
+  - DEVELOPER.md
+  - CHANGELOG.md
+  - LICENSE
