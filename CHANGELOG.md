@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [0.3.16] - 2026-10-10
+## [0.3.17] - 2026-10-10
 
 ### Added
 - Mount, dismount or class travel ability (Travel Form, Ghost Wolf, Aspect of the Cheetah) with a double click

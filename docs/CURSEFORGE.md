@@ -1,6 +1,6 @@
 # Glimpse: Travel – CurseForge-Texte
 
-Zum Kopieren in die Projektseite auf CurseForge. Die Projekt-ID fehlt noch (Beta lädt zu CurseForge hoch); sie kommt in die TOC (`X-Curse-Project-ID`) und in `release.yml` (`-p`).
+Zum Kopieren in die Projektseite auf CurseForge (Projekt-ID 1735124).
 
 ## Projektname
 

@@ -86,8 +86,9 @@ jobs:
         if: env.SKIP != 'true'
         continue-on-error: true
         uses: BigWigsMods/packager@v2
-        # Das Paket hat keine TOC im Hauptordner (Addon liegt im Unterordner), deshalb gehört die CurseForge-ID hierher
-        # (with: args: -p <ID>). Travel hat noch kein CurseForge-Projekt; für alpha wird ohnehin nichts hochgeladen.
+        with:
+          # Das Paket hat keine TOC im Hauptordner (Addon liegt im Unterordner), deshalb steht die CurseForge-ID hier
+          args: -p 1735124
 
       - name: Zip prüfen
         if: env.SKIP != 'true'

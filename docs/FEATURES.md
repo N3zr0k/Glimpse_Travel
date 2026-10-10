@@ -1,6 +1,6 @@
 # Glimpse: Travel – Funktionen
 
-Stand 0.3.16-beta.1. Benötigt Glimpse (Core) 0.3.21 oder neuer.
+Stand 0.3.17-beta.1. Benötigt Glimpse (Core) 0.3.21 oder neuer.
 
 ## Funktionen
 
