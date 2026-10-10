@@ -68,7 +68,7 @@ The Deeprun Tram gets a little extra:
 
 ## Your speed
 
-- **Gryphon flights:** an extra line below the flight time shows your flight speed, with a dwarven quip.
+- **Flights:** an extra line below the flight time shows your flight speed, with a quip: dwarves for the Alliance, wind riders for the Horde.
 - **Player portrait:** a blue number at the right edge of your portrait, next to your name, shows how fast you are moving. It is hidden while standing still and in combat.
 - The unit follows the distance unit in the Glimpse options: km/h or mph.
 

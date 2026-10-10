@@ -66,6 +66,12 @@ function T:HasAura(spellID)
     return false
 end
 
+--- "Alliance" oder "Horde" (Standard Allianz, wenn der Client nichts liefert)
+function T:PlayerFaction()
+    local group = self.api.UnitFactionGroup and self.api.UnitFactionGroup("player")
+    return group == "Horde" and "Horde" or "Alliance"
+end
+
 --- "DRUID", "SHAMAN" ...
 function T:PlayerClass()
     if not self.api.UnitClass then return nil end

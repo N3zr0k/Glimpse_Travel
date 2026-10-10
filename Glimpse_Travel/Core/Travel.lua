@@ -40,6 +40,7 @@ T.api = {
     GetPlayerAuraBySpellID = C_UnitAuras and C_UnitAuras.GetPlayerAuraBySpellID or nil,
     UnitBuff = UnitBuff,
     UnitClass = UnitClass,
+    UnitFactionGroup = UnitFactionGroup,
     GetItemCount = (C_Item and C_Item.GetItemCount) or GetItemCount,
     GetItemCooldown = (C_Container and C_Container.GetItemCooldown) or GetItemCooldown,
     GetItemName = (C_Item and C_Item.GetItemNameByID) or GetItemInfo,

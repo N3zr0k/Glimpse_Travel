@@ -17,7 +17,7 @@ Travel schreibt nichts in Glimpse: Database. Strecke, Zonen, Flugpunkte und Flug
 | `Core/Core.xml` | Lädt die Core-Dateien, `Travel.lua` zuerst, dann Zauber, Tempo, Doppelklick, Ankunft, Optionen | – | – |
 | `Core/Travel.lua` | Legt das Modul `TravelAddon` an, Einstellungen (`Opt`/`SetOpt`), `api`-Tabelle, Hilfen für Zauber, Buffs und Klasse | Einstellungen: Namespace `Glimpse_Travel` in `Glimpse.db` | Glimpse (`NewModule`, `db`, `RegisterAddonOptions`), AceEvent-3.0, `C_MountJournal`, `IsPlayerSpell`, `IsUsableSpell`, `C_UnitAuras`, `GetItemCount` |
 | `Core/Spells.lua` | Gemeinsam für alle Reisearten: Zaubername, bekannt, nutzbar, Abklingzeit, Buff, Klasse, passende Klassenfertigkeit (`ClassSpell`), Reisegestalten (`RegisterForm`, `ActiveTravelForm`) | – | `GetShapeshiftForm`, `GetShapeshiftFormInfo` |
-| `Core/Speed.lua` | Einheit und Umrechnung des Tempos (km/h oder mph nach Entfernungseinheit des Core), für Tiefenbahn, Greifenflug und Portrait | – | `Glimpse:GetDistanceUnit()` |
+| `Core/Speed.lua` | Einheit und Umrechnung des Tempos (km/h oder mph nach Entfernungseinheit des Core), für Tiefenbahn, Flüge und Portrait | – | `Glimpse:GetDistanceUnit()` |
 | `Core/Action.lua` | Doppelklick: entscheidet, was er tut (absteigen, Gestalt aufheben, Wasser, Reittier, Klassenfertigkeit, Tempo); meldet den Handler `travel` an oder ab; Log | – | `Glimpse:RegisterDoubleClick`, `UnregisterDoubleClick`, `GetDoubleClickText` (Core 0.3.8) |
 | `Core/Arrival/Arrival.xml` | Lädt die Ankunft: Anzeige, dann Steuerung | – | – |
 | `Core/Arrival/ArrivalFrame.lua` | Weißer Hinweis, rote Warnung, grüner Countdown und Tempo oben in der Bildschirmmitte, Titel vor dem Doppelpunkt fett | – | `CreateFrame` |
@@ -40,8 +40,8 @@ Travel schreibt nichts in Glimpse: Database. Strecke, Zonen, Flugpunkte und Flug
 | `Modules/DeeprunTram/DeeprunTramWarnings.lua` | Rote Zufallswarnung bei Bewegung während der Tiefenbahn-Fahrt, mit Pause | – | – |
 | `Modules/DeeprunTram/DeeprunTramSpeed.lua` | Tempo der Tiefenbahn als eigene Zeile „Gnomentacho“, Spruch je Tempostufe | – | `Travel:GetTramRide()` (Yards der laufenden Fahrt), `Glimpse:GetDistanceUnit()` |
 | `Modules/DeeprunTram/DeeprunTram.lua` | Tiefenbahn als Fahrtart: Stationsnamen, feste Fahrzeit 58 s, Start, Takt, Bewegung, Ankunft | – | `C_Map.GetMapInfo` |
-| `Modules/FlightRide/FlightRide.xml` | Lädt den Greifenflug: Tempo, Anmeldung | – | – |
-| `Modules/FlightRide/FlightRideSpeed.lua` | Tempo auf Greifenflügen als eigene Zeile mit Zwergenspruch, einer pro Flug | – | `Glimpse:GetDistanceUnit()` |
+| `Modules/FlightRide/FlightRide.xml` | Lädt den Flug: Tempo, Anmeldung | – | – |
+| `Modules/FlightRide/FlightRideSpeed.lua` | Tempo auf Flügen als eigene Zeile mit Spruch (Allianz Zwerge, Horde Windreiter), einer pro Flug | – | `Glimpse:GetDistanceUnit()` |
 | `Modules/FlightRide/FlightRide.lua` | Flugroute als Fahrtart: Zielname (Namen der Flugpunkte, solange die Flugkarte offen ist) und erwartete Zeit | liest über `FlightTime.lua`: `travel` (`flight`, `flighttime`) | `C_TaxiMap`, `GetTaxiMapID`, Ereignis `TAXIMAP_OPENED` |
 | `Modules/PlayerSpeed/PlayerSpeed.xml` | Lädt die Tempoanzeige | – | – |
 | `Modules/PlayerSpeed/PlayerSpeed.lua` | Aktuelles Tempo des Spielers in yd/s, geheime Werte im Kampf ergeben nichts | – | `GetUnitSpeed` |

@@ -3,7 +3,7 @@
 ## Notes: Comfort for travelling: mount or travel form with one double click, flight times, arrival countdown and speed.
 ## Notes-deDE: Komfort beim Reisen: Reittier oder Reisegestalt per Doppelklick, Flugzeiten, Ankunfts-Countdown und Tempo.
 
-## Version: 0.3.17-beta.1
+## Version: 0.3.18-beta.1
 ## Author: N3zr0k
 ## X-License: MIT
 ## X-Curse-Project-ID: 1735124

@@ -2,7 +2,7 @@ local Glimpse = LibStub("AceAddon-3.0"):GetAddon("Glimpse")
 local T = Glimpse:GetModule("TravelAddon")
 local L = T.L
 
--- Tempo-Umrechnung für alle Anzeigen (Tiefenbahn, Greifenflug, Portrait). Nichts wird gespeichert.
+-- Tempo-Umrechnung für alle Anzeigen (Tiefenbahn, Flug, Portrait). Nichts wird gespeichert.
 
 T.KMH = 0.9144 * 3.6     -- 1 yd/s in km/h
 T.MPH = 3600 / 1760      -- 1 yd/s in mph

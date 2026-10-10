@@ -268,6 +268,12 @@ test("Arrival: Greifenflug zeigt das Tempo mit Zwergenspruch unter der Flugzeit"
     e.now = 1004; e.T:RideTick(e.now)
     eq(e.fonts[6].text:find("66 km/h", 1, true) ~= nil, true, "ohne Tempo bleibt die Zeile")
     e.T:RideEnd()
+    e.speed = 14
+    e.T.api.UnitFactionGroup = function() return "Horde" end
+    e.T.api.random = function() return 1 end
+    e.T:RideStart("flight", 100020, 1000)
+    eq(e.fonts[6].text, "Windrider speedometer 46 km/h, Orgrimmar sends loud regards!", "Horde: eigene Sprüche")
+    e.T:RideEnd()
     e.T:SetOpt("arrival", false)
     e.speed = 14
     e.T:RideStart("flight", 100020, 1000)

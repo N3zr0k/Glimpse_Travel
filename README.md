@@ -11,7 +11,7 @@
 
 Comfort for travelling: one double click mounts you up, dismounts, or uses your class ability for faster travel when no
 mount is possible. The flight map shows how long a flight takes, a countdown runs to the arrival on the Deeprun Tram and
-on flight routes, and your speed is shown on gryphon flights and at the player portrait.
+on flight routes, and your speed is shown on flights and at the player portrait.
 
 Requires [Glimpse](https://github.com/N3zr0k/Glimpse) 0.3.21 or newer. For WoW Forever (interface 16001).
 
@@ -81,7 +81,7 @@ On the Deeprun Tram and on flight routes a green line at the top of the screen c
 
 ### Speed
 
-* **Gryphon flights:** an extra line below the flight time shows your flight speed with a dwarven quip, one per flight
+* **Flights:** an extra line below the flight time shows your flight speed with a quip, one per flight: dwarves for the Alliance, wind riders for the Horde
   (`Modules/FlightRide/`).
 * **Player portrait:** a blue number at the right edge of the portrait, next to your name, shows how fast you are
   moving. It is hidden while standing still and in combat (`Modules/PlayerSpeed/`).
@@ -99,7 +99,7 @@ Open them with `/gli config`, then Glimpse > Travel, tab "General":
 * **Show the flight time in the tooltip:** on the flight map (on by default).
 * **Show a countdown to the arrival** (on), **Play a sound shortly before the arrival** (off), **Show notes during the
   Deeprun Tram ride** (on), **Show a warning when you move during the Deeprun Tram ride** (on),
-  **Show the speed of the Deeprun Tram** (on), **Show the speed on gryphon flights** (on), **Show your speed at the player portrait** (on).
+  **Show the speed of the Deeprun Tram** (on), **Show the speed on flights** (on), **Show your speed at the player portrait** (on).
 * **Modifier key and mouse button** of the double click. Hidden while all of these switches are off; the double click then
   also disappears from the list in the Glimpse options.
 
