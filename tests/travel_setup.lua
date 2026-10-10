@@ -2,11 +2,13 @@
 -- Gemeinsamer Aufbau für die Travel-Tests: lädt alle Dateien und steuert die Blizzard-API über env.
 local stub = require("wowstub")
 
-local FILES = { "Core/Travel.lua", "Core/Options.lua", "Modules/TravelAction/TravelActionMount.lua",
-    "Modules/TravelAction/TravelActionClass.lua", "Modules/TravelAction/TravelActionWater.lua", "Modules/TravelAction/TravelActionBoost.lua",
-    "Modules/TravelAction/TravelAction.lua", "Modules/FlightTime/FlightTime.lua", "Modules/FlightTime/FlightTimeTooltip.lua",
-    "Modules/Arrival/ArrivalFrame.lua", "Modules/Arrival/ArrivalPoints.lua", "Modules/Arrival/ArrivalWarnings.lua", "Modules/Arrival/ArrivalSpeed.lua",
-    "Modules/Arrival/Arrival.lua", "Modules/PlayerSpeed/PlayerSpeed.lua", "Modules/PlayerSpeed/PlayerSpeedFrame.lua",
+local FILES = { "Core/Travel.lua", "Core/Spells.lua", "Core/Speed.lua", "Core/Action.lua", "Core/Arrival/ArrivalFrame.lua",
+    "Core/Arrival/Arrival.lua", "Core/Options.lua",
+    "Modules/Mount/Mount.lua", "Modules/ClassTravel/ClassTravel.lua", "Modules/Water/Water.lua", "Modules/SpeedBoost/SpeedBoost.lua",
+    "Modules/FlightTime/FlightTime.lua", "Modules/FlightTime/FlightTimeTooltip.lua",
+    "Modules/DeeprunTram/DeeprunTramPoints.lua", "Modules/DeeprunTram/DeeprunTramWarnings.lua", "Modules/DeeprunTram/DeeprunTramSpeed.lua",
+    "Modules/DeeprunTram/DeeprunTram.lua", "Modules/FlightRide/FlightRideSpeed.lua", "Modules/FlightRide/FlightRide.lua",
+    "Modules/PlayerSpeed/PlayerSpeed.lua", "Modules/PlayerSpeed/PlayerSpeedFrame.lua",
     "Commands/Travel.lua" }
 
 local SPELL_NAMES = { [783] = "Reisegestalt", [1066] = "Wassergestalt", [2645] = "Geisterwolf", [5118] = "Aspekt des Geparden", [2983] = "Sprinten", [8696] = "Sprinten", [1850] = "Spurt" }

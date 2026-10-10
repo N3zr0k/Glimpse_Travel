@@ -4,6 +4,12 @@ local T = Glimpse:GetModule("TravelAddon")
 -- Letzter Versuch, wenn weder Reittier noch Reisegestalt gehen (an Land und im Wasser): erst eine Tempo-Fähigkeit der
 -- Klasse (T.SPEED_BOOSTS, Option speedBoost), dann ein Tempotrank aus den Taschen (Option speedPotion, verbraucht ihn).
 -- Läuft die Abklingzeit oder wirkt der Buff schon, wird übersprungen.
+-- Fähigkeiten, die das Tempo kurz erhöhen (eigene Option); erst, wenn weder Reittier noch Reisegestalt gehen
+T.SPEED_BOOSTS = {
+    ROGUE = { { spell = 2983, ranks = { 2983, 8696, 11305 }, cooldown = true } },  -- Sprinten
+    DRUID = { { spell = 1850, ranks = { 1850, 9821 }, cooldown = true } },         -- Spurt (nur in Katzengestalt)
+}
+
 T.SPEED_POTIONS = {
     { item = 2459, aura = 2379 },  -- Beweglichkeitstrank
 }

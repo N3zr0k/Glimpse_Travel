@@ -1,0 +1,5 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- Tempo des Greifenflugs, zuletzt die Anmeldung beim Arrival-Modul. -->
+    <Script file="FlightRideSpeed.lua"/>
+    <Script file="FlightRide.lua"/>
+</Ui>

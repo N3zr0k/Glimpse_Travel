@@ -35,3 +35,12 @@ function T:BestMount()
     local pick = pool[self.api.random(#pool)]
     return pick.name, pick.spellID
 end
+
+--- Aktion "Reittier rufen" oder nil; reason ist der bisherige Grund fürs Log
+function T:MountAction(ctx, reason)
+    if not self:Opt("mount") then return nil, reason end
+    if not ctx.canMount then return nil, "no mount allowed here" end
+    local name, spellID = self:BestMount()
+    if name then return { type = "spell", spell = name }, "mount " .. spellID end
+    return nil, spellID -- ohne Reittier steht hier der Grund
+end

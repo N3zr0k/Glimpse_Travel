@@ -1,7 +1,12 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
-    <!-- Je Erweiterung ein Ordner mit eigener XML. -->
-    <Include file="TravelAction\TravelAction.xml"/>
+    <!-- Je Reiseart ein Ordner mit eigener XML. Was für alle gilt, liegt in Core/. DeeprunTram und FlightRide melden sich
+         bei Core/Arrival an. -->
+    <Include file="Mount\Mount.xml"/>
+    <Include file="ClassTravel\ClassTravel.xml"/>
+    <Include file="Water\Water.xml"/>
+    <Include file="SpeedBoost\SpeedBoost.xml"/>
     <Include file="FlightTime\FlightTime.xml"/>
-    <Include file="Arrival\Arrival.xml"/>
+    <Include file="DeeprunTram\DeeprunTram.xml"/>
+    <Include file="FlightRide\FlightRide.xml"/>
     <Include file="PlayerSpeed\PlayerSpeed.xml"/>
 </Ui>

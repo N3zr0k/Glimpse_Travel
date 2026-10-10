@@ -1,5 +1,9 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
-    <!-- Travel.lua legt das Modul an, Options.lua erweitert es nur. -->
+    <!-- Travel.lua legt das Modul an, danach alles, was für alle Reisearten gilt. -->
     <Script file="Travel.lua"/>
+    <Script file="Spells.lua"/>
+    <Script file="Speed.lua"/>
+    <Script file="Action.lua"/>
+    <Include file="Arrival\Arrival.xml"/>
     <Script file="Options.lua"/>
 </Ui>

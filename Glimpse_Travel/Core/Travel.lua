@@ -79,6 +79,7 @@ function T:OnEnable()
     if self.ActionUpdate then self:ActionUpdate() end
     if self.FlightTimeEnable then self:FlightTimeEnable() end
     if self.ArrivalEnable then self:ArrivalEnable() end
+    if self.FlightRideEnable then self:FlightRideEnable() end
     if self.PlayerSpeedEnable then self:PlayerSpeedEnable() end
 end
 
@@ -99,67 +100,4 @@ function T:SetOpt(name, value)
     self.settings.profile[name] = value
     if self.ActionUpdate then self:ActionUpdate() end
     if self.PlayerSpeedUpdate then self:PlayerSpeedUpdate() end
-end
-
---- Zaubername aus der ID, nil wenn der Client ihn nicht kennt
-function T:SpellName(spellID)
-    local api = self.api
-    if api.GetSpellName then
-        local ok, name = pcall(api.GetSpellName, spellID)
-        if ok and name then return name end
-    end
-    if api.GetSpellInfo then
-        local ok, name = pcall(api.GetSpellInfo, spellID)
-        if ok and name then return name end
-    end
-    return nil
-end
-
-function T:KnowsSpell(spellID)
-    local api = self.api
-    for _, ask in ipairs({ api.IsPlayerSpell, api.IsSpellKnown }) do
-        local ok, known = pcall(ask, spellID)
-        if ok and known then return true end
-    end
-    return false
-end
-
---- Nutzbar laut Client (Mana, Gestalt ...); ohne Abfrage wird es versucht
-function T:SpellUsable(spellID)
-    local api = self.api
-    if not api.IsUsableSpell then return true end
-    local ok, usable = pcall(api.IsUsableSpell, spellID)
-    return not ok or usable == true or usable == 1
-end
-
---- Läuft die Abklingzeit? Die globale Abklingzeit (bis 1,5 s) zählt nicht.
-function T:OnCooldown(spellID)
-    if not self.api.GetSpellCooldown then return false end
-    local ok, start, duration = pcall(self.api.GetSpellCooldown, spellID)
-    if not ok then return false end
-    if type(start) == "table" then start, duration = start.startTime, start.duration end
-    return (start or 0) > 0 and (duration or 0) > 1.5
-end
-
---- Buff mit dieser Zauber-ID aktiv?
-function T:HasAura(spellID)
-    local api = self.api
-    if api.GetPlayerAuraBySpellID then
-        local ok, aura = pcall(api.GetPlayerAuraBySpellID, spellID)
-        return ok and aura ~= nil
-    end
-    if not api.UnitBuff then return false end
-    for index = 1, 40 do
-        local ok, name, _, _, _, _, _, _, _, id = pcall(api.UnitBuff, "player", index)
-        if not ok or not name then return false end
-        if id == spellID then return true end
-    end
-    return false
-end
-
---- "DRUID", "SHAMAN" ...
-function T:PlayerClass()
-    if not self.api.UnitClass then return nil end
-    local _, class = self.api.UnitClass("player")
-    return class
 end

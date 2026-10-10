@@ -1,24 +1,44 @@
-# CurseForge texts: Glimpse: Travel
+# Glimpse: Travel – CurseForge-Texte
 
-## Project name
+Zum Kopieren in die Projektseite auf CurseForge. Die Projekt-ID fehlt noch (Beta lädt zu CurseForge hoch); sie kommt in die TOC (`X-Curse-Project-ID`) und in `release.yml` (`-p`).
 
+## Projektname
+
+```
 Glimpse: Travel
+```
+
+## Summary
+
+```
+Mount or travel form with one double click, flight times on the flight map, an arrival countdown and your speed.
+```
+
+## Kategorie
+
+```
+Miscellaneous
+```
 
 ## Logo
 
 `docs/icon.png` (512 x 512)
 
-## Summary
+## Beschreibung
 
-Mount, travel form or speed boost with one double click, flight times on the flight map and a countdown to your arrival.
+Alles unter dieser Zeile in den Beschreibungs-Editor (Markdown) kopieren.
 
-## Description
+---
+
+# Glimpse: Travel
+
+[![latest](https://img.shields.io/github/v/release/N3zr0k/Glimpse_Travel?include_prereleases&amp;sort=date&amp;label=latest)](https://github.com/N3zr0k/Glimpse_Travel/releases) [![last push](https://img.shields.io/github/last-commit/N3zr0k/Glimpse_Travel/main?label=last%20push)](https://github.com/N3zr0k/Glimpse_Travel/commits/main) [![CI](https://img.shields.io/github/actions/workflow/status/N3zr0k/Glimpse_Travel/ci.yml?branch=main&amp;label=CI)](https://github.com/N3zr0k/Glimpse_Travel/actions/workflows/ci.yml)
 
 > ## ⚠ Requires the Glimpse core addon
 > **Glimpse: Travel only works together with [Glimpse](https://www.curseforge.com/wow/addons/glimpse).** Install Glimpse first (version 0.3.21 or newer), otherwise this addon does not load.
 > 👉 https://www.curseforge.com/wow/addons/glimpse
 
-Comfort for travelling: **Glimpse: Travel** gets you moving with one double click, tells you how long a flight takes and counts down to your arrival.
+Comfort for travelling: **Glimpse: Travel** gets you moving with one double click, tells you how long a flight takes, counts down to your arrival and shows how fast you are.
 
 ## Travel with a double click
 
@@ -28,7 +48,9 @@ Hold a key (Alt by default) and double right-click the game world:
 - **On land:** a mount from your collection, favorites first.
 - **No mount allowed or riding not learned yet:** Travel Form, Ghost Wolf or Aspect of the Cheetah.
 - **In water:** Aquatic Form, or a Swim Speed Potion if you like.
-- **Nothing else possible:** Sprint, Dash or a Swiftness Potion.
+- **Nothing else possible:** Sprint, Dash or a Swiftness Potion if you like.
+
+Works out of combat only, because the game blocks it for all addons in combat.
 
 ## Flight map
 
@@ -42,13 +64,13 @@ The Deeprun Tram gets a little extra:
 
 - notes along the way, from departure to arrival
 - red safety notices from the tram management when you walk around in the car
-- a gnome speedometer in km/h or mph
+- a gnome speedometer with a quip that fits the speed
 
 ## Your speed
 
-A blue number at the right edge of your portrait, next to your name, shows how fast you are moving, in km/h or mph. It is hidden while standing still and in combat.
-
-On gryphon flights, an extra line below the flight time shows the flight speed with a dwarven quip.
+- **Gryphon flights:** an extra line below the flight time shows your flight speed, with a dwarven quip.
+- **Player portrait:** a blue number at the right edge of your portrait, next to your name, shows how fast you are moving. It is hidden while standing still and in combat.
+- The unit follows the distance unit in the Glimpse options: km/h or mph.
 
 ## Good to know
 

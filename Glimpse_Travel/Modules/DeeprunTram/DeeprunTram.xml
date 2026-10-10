@@ -1,0 +1,7 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- Hinweise, Warnungen und Tempo der Tiefenbahn, zuletzt die Anmeldung beim Arrival-Modul. -->
+    <Script file="DeeprunTramPoints.lua"/>
+    <Script file="DeeprunTramWarnings.lua"/>
+    <Script file="DeeprunTramSpeed.lua"/>
+    <Script file="DeeprunTram.lua"/>
+</Ui>

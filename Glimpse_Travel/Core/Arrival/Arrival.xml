@@ -1,0 +1,5 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- Anzeige zuerst, dann die Steuerung. Tiefenbahn und Flug melden sich danach mit T:RegisterRide an. -->
+    <Script file="ArrivalFrame.lua"/>
+    <Script file="Arrival.lua"/>
+</Ui>

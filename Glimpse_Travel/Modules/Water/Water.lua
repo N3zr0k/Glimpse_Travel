@@ -3,6 +3,15 @@ local T = Glimpse:GetModule("TravelAddon")
 
 -- Im Wasser: Wassergestalt der Klasse (Option Klassenfertigkeit), sonst ein Schwimmtrank aus den Taschen (eigene Option,
 -- weil er verbraucht wird). Ein Trank mit aktivem Buff wird nicht noch einmal getrunken.
+T.CLASS_WATER = {
+    DRUID = { { spell = 1066, form = true } },                   -- Wassergestalt
+}
+for _, entries in pairs(T.CLASS_WATER) do
+    for _, entry in ipairs(entries) do
+        if entry.form then T:RegisterForm(entry.spell) end
+    end
+end
+
 T.SWIM_POTIONS = {
     { item = 6372, aura = 7840 },  -- Trank der Schwimmgeschwindigkeit
 }

@@ -5,9 +5,9 @@ local L = T.L
 -- Reise-Aktion über den Doppelklick-Verteiler des Cores (Standard Alt + Doppelklick rechts). Ein Doppelklick:
 --   aufgesessen               absteigen
 --   in einer Reisegestalt     Gestalt aufheben
---   im Wasser                 Wassergestalt oder Schwimmtrank (TravelActionWater.lua)
+--   im Wasser                 Wassergestalt oder Schwimmtrank (Modules/Water)
 --   an Land                   Reittier, wenn eins erlaubt und gelernt ist; sonst die Klassenfertigkeit
---   sonst                     Tempo-Fähigkeit oder Tempotrank, auch im Wasser (TravelActionBoost.lua)
+--   sonst                     Tempo-Fähigkeit oder Tempotrank, auch im Wasser (Modules/SpeedBoost)
 -- Erkennung, Secure-Button und Kampfsperre liegen im Core. Sind alle Schalter (Reittier, Klassenfertigkeit, Tempo-Fähigkeit,
 -- Tempotrank, Schwimmtrank) aus, meldet sich der Handler ab und verschwindet damit auch aus dem Block "Doppelklick" im Core.
 
@@ -40,20 +40,11 @@ function T:ChooseAction(ctx)
     end
 
     local reason = "mount switched off"
-    if self:Opt("mount") then
-        if ctx.canMount then
-            local name, spellID = self:BestMount()
-            if name then return { type = "spell", spell = name }, "mount " .. spellID end
-            reason = spellID -- ohne Reittier steht hier der Grund
-        else
-            reason = "no mount allowed here"
-        end
-    end
-    if self:Opt("classSpeed") then
-        local spellID, name = self:ClassSpell(self.CLASS_SPEED, ctx)
-        if spellID then return { type = "spell", spell = name }, "travel ability " .. spellID end
-        reason = reason .. ", " .. name
-    end
+    local action
+    action, reason = self:MountAction(ctx, reason)
+    if action then return action, reason end
+    action, reason = self:ClassAction(ctx, reason)
+    if action then return action, reason end
     return self:BoostAction(ctx, reason)
 end
 

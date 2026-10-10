@@ -2,14 +2,15 @@
 
 ## [Unreleased]
 
+## [0.3.16] - 2026-10-10
+
 ### Added
-- First version: mount, dismount and class travel ability with a key and double click
+- Mount, dismount or class travel ability (Travel Form, Ghost Wolf, Aspect of the Cheetah) with a double click
 - In water: Aquatic Form or a swim speed potion (optional)
-- `/gli travel` command
-- Speed abilities (Sprint, Dash) and speed potions when no mount or travel form is possible
-- Countdown to the arrival on the Deeprun Tram and on flight routes, notes during the tram ride
-- Red safety notices when moving during the tram ride
-- Speed of the Deeprun Tram in km/h or mph
-- Own speed in blue at the player portrait (hidden while standing and in combat)
-- Gryphon flight speed with dwarven quips below the flight time
+- Sprint, Dash or a Swiftness Potion when nothing else is possible
 - Flight time in the tooltip of the flight map, estimated from legs if needed
+- Countdown to the arrival on the Deeprun Tram and on flight routes, optional sound
+- Notes and red safety warnings during the Deeprun Tram ride
+- Speed of the Deeprun Tram and of gryphon flights, with funny quips
+- Own speed in blue at the player portrait (hidden while standing and in combat)
+- `/gli travel` command

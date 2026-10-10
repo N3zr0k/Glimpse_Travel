@@ -10,8 +10,8 @@
 </p>
 
 Comfort for travelling: one double click mounts you up, dismounts, or uses your class ability for faster travel when no
-mount is possible. The flight map shows how long a flight takes, and a countdown runs to the arrival on the Deeprun Tram
-and on flight routes.
+mount is possible. The flight map shows how long a flight takes, a countdown runs to the arrival on the Deeprun Tram and
+on flight routes, and your speed is shown on gryphon flights and at the player portrait.
 
 Requires [Glimpse](https://github.com/N3zr0k/Glimpse) 0.3.21 or newer. For WoW Forever (interface 16001).
 
@@ -63,12 +63,29 @@ Average of 3 flights
 ### Arrival countdown
 
 On the Deeprun Tram and on flight routes a green line at the top of the screen counts down to the arrival:
-`Arrival in Stormwind in 58 s`. The tram always takes 58 seconds (sent by Glimpse at departure); a flight uses the average
-Glimpse measured for this route, until then it says `Next stop: ... (flight time is being measured)`. Optional: a sound 5 seconds before the arrival.
-During the tram ride a note appears in white 1 second after departure, at 25, 42 and 75 % of the travel time
-and on arrival (texts in `Modules/Arrival/ArrivalPoints.lua`). Moving during the
-ride shows a random safety notice in red, at most every 20 seconds (`Modules/Arrival/ArrivalWarnings.lua`). An extra line
-shows the speed of the tram in km/h or mph (distance unit in the Glimpse options) (`Modules/Arrival/ArrivalSpeed.lua`). Departure, arrival and the travel times come from the Travel module of Glimpse.
+`Arrival in Stormwind in 58 s`.
+
+* The tram always takes 58 seconds (sent by Glimpse at departure). A flight uses the average Glimpse measured for this
+  route; until then the line says `Next stop: ... (flight time is being measured)`.
+* Optional: a sound 5 seconds before the arrival.
+* Departure, arrival and the travel times come from the Travel module of Glimpse.
+
+### Deeprun Tram extras
+
+* **Notes** in white, 1 second after departure, at 25, 42 and 75 % of the ride and on arrival
+  (texts in `Modules/DeeprunTram/DeeprunTramPoints.lua`).
+* **Safety warnings** in red when you move during the ride, one at random, at most every 20 seconds
+  (`Modules/DeeprunTram/DeeprunTramWarnings.lua`).
+* **Gnome speedometer:** an extra line with the speed of the tram and a quip that fits the speed
+  (`Modules/DeeprunTram/DeeprunTramSpeed.lua`).
+
+### Speed
+
+* **Gryphon flights:** an extra line below the flight time shows your flight speed with a dwarven quip, one per flight
+  (`Modules/FlightRide/`).
+* **Player portrait:** a blue number at the right edge of the portrait, next to your name, shows how fast you are
+  moving. It is hidden while standing still and in combat (`Modules/PlayerSpeed/`).
+* The unit follows the distance unit in the Glimpse options: km/h for meters, mph for yards.
 
 ## Options
 
@@ -103,10 +120,15 @@ The folder must be called `Glimpse_Travel`.
 ## For developers
 
 The double click runs through the double-click dispatcher of Glimpse (`Glimpse:RegisterDoubleClick`, see `DEVELOPER.md`
-in the Glimpse repository). `Modules/TravelAction/TravelAction.lua` decides what a click does; the class abilities are a
-table per class in `TravelActionClass.lua`, the swim potions in `TravelActionWater.lua`. Distance, zones and flight times
+in the Glimpse repository). `Core/Action.lua` decides what a click does; each way of travelling has its own module:
+`Modules/Mount/`, `Modules/ClassTravel/` (class abilities per class), `Modules/Water/` (swim potions) and `Modules/SpeedBoost/`. Distance, zones and flight times
 are recorded by the Travel module of Glimpse; this addon only reads them (`GlimpseDB:Get("travel")`, kinds `flight` and
 `flighttime`, see `Modules/FlightTime/FlightTime.lua`).
+
+Everything that is only needed for one way of travelling lives in its own folder under `Modules/`. What all of them share is
+in `Core/`: the spell helpers (`Spells.lua`), the double click (`Action.lua`), the speed unit (`Speed.lua`) and the ride
+countdown (`Arrival/`). `Modules/DeeprunTram/` and `Modules/FlightRide/` register their kind of ride there
+(`T:RegisterRide`) with everything that only belongs to it.
 
 `docs/FEATURES.md` lists all features and what the addon reads from the database, `docs/CURSEFORGE.md` holds the texts
 for the CurseForge project page, `docs/Files.md` describes every file.

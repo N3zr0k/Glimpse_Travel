@@ -1,9 +1,9 @@
 ## Interface: 16001
 ## Title: Glimpse: Travel
-## Notes: Comfort for travelling: mount, travel form and swim help with one double click.
-## Notes-deDE: Komfort beim Reisen: Reittier, Reisegestalt und Schwimmhilfe mit einem Doppelklick.
+## Notes: Comfort for travelling: mount or travel form with one double click, flight times, arrival countdown and speed.
+## Notes-deDE: Komfort beim Reisen: Reittier oder Reisegestalt per Doppelklick, Flugzeiten, Ankunfts-Countdown und Tempo.
 
-## Version: 0.3.15-alpha.1
+## Version: 0.3.16-beta.1
 ## Author: N3zr0k
 ## X-License: MIT
 ## X-Website: https://github.com/N3zr0k/Glimpse_Travel
