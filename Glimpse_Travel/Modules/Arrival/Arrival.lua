@@ -48,8 +48,8 @@ function T:CountdownText(now)
     if not ride or ride.silent then return nil end
     local name = ride.name -- nil: Ziel unbekannt
     if not ride.seconds then
-        return name and format(L["Next stop: %s (travel time is being measured)"], name)
-            or L["Next station (travel time is being measured)"]
+        return name and format(L["Next stop: %s (flight time is being measured)"], name)
+            or L["Next stop (flight time is being measured)"]
     end
     local left = ride.seconds - (now - ride.start)
     if left <= 0 then return name and format(L["Arriving in %s"], name) or L["Arriving at the next station"] end

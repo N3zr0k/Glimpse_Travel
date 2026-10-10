@@ -3,7 +3,7 @@
 ## Notes: Comfort for travelling: mount, travel form and swim help with one double click.
 ## Notes-deDE: Komfort beim Reisen: Reittier, Reisegestalt und Schwimmhilfe mit einem Doppelklick.
 
-## Version: 0.3.12-alpha.1
+## Version: 0.3.14-alpha.1
 ## Author: N3zr0k
 ## X-License: MIT
 ## X-Website: https://github.com/N3zr0k/Glimpse_Travel

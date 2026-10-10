@@ -60,6 +60,16 @@ Average of 3 flights
 * A route you never flew in one go is estimated from its legs, if every leg is measured: `Flight time: about 4:10`.
 * Without any measurement: `Flight time: not measured yet`.
 
+### Arrival countdown
+
+On the Deeprun Tram and on flight routes a green line at the top of the screen counts down to the arrival:
+`Arrival in Stormwind in 58 s`. The tram always takes 58 seconds (sent by Glimpse at departure); a flight uses the average
+Glimpse measured for this route, until then it says `Next stop: ... (flight time is being measured)`. Optional: a sound 5 seconds before the arrival.
+During the tram ride a note appears in white 1 second after departure, at 25, 42 and 75 % of the travel time
+and on arrival (texts in `Modules/Arrival/ArrivalPoints.lua`). Moving during the
+ride shows a random safety notice in red, at most every 20 seconds (`Modules/Arrival/ArrivalWarnings.lua`). An extra line
+shows the speed of the tram in km/h or mph (distance unit in the Glimpse options) (`Modules/Arrival/ArrivalSpeed.lua`). Departure, arrival and the travel times come from the Travel module of Glimpse.
+
 ## Options
 
 Open them with `/gli config`, then Glimpse > Travel, tab "General":

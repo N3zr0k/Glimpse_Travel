@@ -1,6 +1,6 @@
 # Glimpse: Travel – Funktionen
 
-Stand 0.3.12-alpha.1. Benötigt Glimpse (Core) 0.3.21 oder neuer.
+Stand 0.3.14-alpha.1. Benötigt Glimpse (Core) 0.3.21 oder neuer.
 
 ## Funktionen
 
@@ -14,7 +14,7 @@ Stand 0.3.12-alpha.1. Benötigt Glimpse (Core) 0.3.21 oder neuer.
 | Flugzeit im Tooltip | Auf der Flugkarte zeigt jeder Flugpunkt die Flugzeit, gemessen vom Core. Nie direkt geflogene Strecken werden aus Teilstrecken geschätzt. | Flugzeit (an) |
 | Countdown bis zur Ankunft | Grüne Zeile oben mit der Restzeit in der Tiefenbahn (fest 58 s) und auf Flugrouten. | Countdown (an), Ton 5 s vorher (aus) |
 | Hinweise in der Tiefenbahn | Weiße Hinweise 1 s nach Abfahrt, bei 25, 42 und 75 % der Fahrt und bei Ankunft. Titel vor dem Doppelpunkt fett. | Hinweise (an) |
-| Warnungen in der Tiefenbahn | Bewegt man sich während der Fahrt, erscheint zufällig eine von sechs roten Sicherheitswarnungen, danach 20 s Pause. | Warnungen (an) |
+| Warnungen in der Tiefenbahn | Bewegt man sich während der Fahrt, erscheint zufällig eine von sieben roten Sicherheitswarnungen, danach 20 s Pause. | Warnungen (an) |
 | Tempo der Tiefenbahn | Eigene Zeile „Gnomentacho“ in km/h oder mph (Entfernungseinheit des Core) mit Spruch je Tempostufe, ab 138 km/h wechselnde Sprüche. | Tempo (an) |
 | `/gli travel` | Einstellungen, Taste, Reittiere, Klassenfertigkeiten, laufende Fahrt, letzte Doppelklicks. | – |
 

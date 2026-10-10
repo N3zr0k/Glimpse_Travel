@@ -81,7 +81,7 @@ test("Arrival: Flugroute mit Namen aus der Flugkarte und Flugzeit aus dem Core",
     eq(green(e), "Arrival in Eisenschmiede in 2 min 30 s", "Flug")
     e.T:RideEnd()
     e.T:RideStart("flight", 100030, 1000)
-    eq(green(e), "Next stop: your destination (travel time is being measured)", "unbekannter Punkt, nicht gemessen")
+    eq(green(e), "Next stop: your destination (flight time is being measured)", "unbekannter Punkt, nicht gemessen")
 end)
 
 test("Arrival: Ton nur mit Option, einmal 5 s vor der Ankunft", function()

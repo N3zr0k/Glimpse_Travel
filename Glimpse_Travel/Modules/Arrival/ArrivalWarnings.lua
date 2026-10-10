@@ -11,6 +11,7 @@ T.TRAM_WARNINGS = {
     L["Announcement from the tram management: Leaving the car during the underwater panorama is strictly forbidden and results in an immediate and lengthy walk."],
     L["Accident report: A careless adventurer missed the platform and is now walking alone on the tracks of the Deeprun Tram built by Mekkatorque."],
     L["Gnomish warning: Mind the platform edges, because whoever loses their footing here gets to walk the route between the dwarves and the humans without transport."],
+    L["Monty Shouts: KEEP YOUR ARMS AND LEGS INSIDE IF YOU DO NOT WANT WOODEN SPLINTERS!"],
 }
 T.WARNING_PAUSE = 20
 

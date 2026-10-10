@@ -35,7 +35,7 @@ local function BuildGeneral(self)
             L["Hover a flight point on the flight map to see how long the flight from here takes, measured by Glimpse on your characters. Routes you never flew in one go are estimated from their measured legs."]),
         arrivalHeader = { type = "header", order = 50, name = L["Arrival"] },
         arrival = Toggle("arrival", 51, L["Show a countdown to the arrival"],
-            L["On the Deeprun Tram and on flight routes a green line at the top of the screen counts down to the arrival, from the travel times Glimpse measured."]),
+            L["On the Deeprun Tram and on flight routes a green line at the top of the screen counts down to the arrival, from the travel and flight times Glimpse knows."]),
         arrivalSound = Toggle("arrivalSound", 52, L["Play a sound shortly before the arrival"],
             L["5 seconds before the arrival."]),
         tramNotes = Toggle("tramNotes", 53, L["Show notes during the Deeprun Tram ride"],
