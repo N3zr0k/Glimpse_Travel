@@ -20,6 +20,8 @@ T.defaults = {
     tramNotes = true,      -- weiße Hinweise während der Tiefenbahn-Fahrt
     tramWarnings = true,   -- rote Warnung, wenn man sich in der Tiefenbahn bewegt
     tramSpeed = true,      -- Tempo der Tiefenbahn als eigene Zeile
+    flightSpeed = true,    -- Flugtempo als eigene Zeile bei Flugrouten
+    playerSpeed = true,    -- eigenes Tempo in Blau am Spielerportrait
     modifier = "ALT",
     button = "RightButton",
 }
@@ -57,6 +59,11 @@ T.api = {
     After = C_Timer and C_Timer.After,
     PlaySound = PlaySound,
     GetMapInfo = C_Map and C_Map.GetMapInfo,
+    -- Tempoanzeige
+    GetUnitSpeed = GetUnitSpeed,
+    InCombat = function() return UnitAffectingCombat("player") end,
+    issecretvalue = issecretvalue,
+    GetPlayerFrame = function() return PlayerFrame end,
     GetTramRide = function()
         local travel = Glimpse:GetModule("Travel", true)
         return travel and travel.GetTramRide and travel:GetTramRide()
@@ -72,6 +79,7 @@ function T:OnEnable()
     if self.ActionUpdate then self:ActionUpdate() end
     if self.FlightTimeEnable then self:FlightTimeEnable() end
     if self.ArrivalEnable then self:ArrivalEnable() end
+    if self.PlayerSpeedEnable then self:PlayerSpeedEnable() end
 end
 
 function T:OnDisable()
@@ -90,6 +98,7 @@ end
 function T:SetOpt(name, value)
     self.settings.profile[name] = value
     if self.ActionUpdate then self:ActionUpdate() end
+    if self.PlayerSpeedUpdate then self:PlayerSpeedUpdate() end
 end
 
 --- Zaubername aus der ID, nil wenn der Client ihn nicht kennt

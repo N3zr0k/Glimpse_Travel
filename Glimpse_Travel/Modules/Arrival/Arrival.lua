@@ -72,6 +72,9 @@ function T:RideTick(now)
         if text then self:ShowNote(text, now) end
         local speedText = self:CheckSpeed(now)
         if speedText then self:ShowSpeed(speedText) end
+    elseif ride.kind == "flight" then
+        local speedText = self:CheckFlightSpeed(now)
+        if speedText then self:ShowSpeed(speedText) end
     end
     self:ExpireNote(now)
     self:ShowCountdown(self:CountdownText(now))
@@ -84,7 +87,8 @@ function T:RideStart(kind, id, startTime, seconds)
         return
     end
     local tramExtras = kind == "tram" and (self:Opt("tramNotes") or self:Opt("tramWarnings") or self:Opt("tramSpeed"))
-    if not self:Opt("arrival") and not tramExtras then return end
+    local flightExtras = kind == "flight" and self:Opt("flightSpeed")
+    if not self:Opt("arrival") and not tramExtras and not flightExtras then return end
     local name, known = self:RideInfo(kind, id)
     seconds = seconds or known
     local now = self.api.GetTime()

@@ -82,7 +82,7 @@ Open them with `/gli config`, then Glimpse > Travel, tab "General":
 * **Show the flight time in the tooltip:** on the flight map (on by default).
 * **Show a countdown to the arrival** (on), **Play a sound shortly before the arrival** (off), **Show notes during the
   Deeprun Tram ride** (on), **Show a warning when you move during the Deeprun Tram ride** (on),
-  **Show the speed of the Deeprun Tram** (on).
+  **Show the speed of the Deeprun Tram** (on), **Show the speed on gryphon flights** (on), **Show your speed at the player portrait** (on).
 * **Modifier key and mouse button** of the double click. Hidden while all of these switches are off; the double click then
   also disappears from the list in the Glimpse options.
 

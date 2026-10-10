@@ -227,6 +227,7 @@ test("Arrival: ohne Countdown-Option laufen nur die Hinweise, ohne beides nichts
     e.T:SetOpt("tramNotes", false)
     e.T:SetOpt("tramWarnings", false)
     e.T:SetOpt("tramSpeed", false)
+    e.T:SetOpt("flightSpeed", false)
     e.T:RideStart("tram", 1, 1000, 60)
     eq(e.T:CurrentRide(), nil, "nichts gestartet")
     e.T:RideStart("flight", 100020, 1000)
@@ -250,4 +251,29 @@ test("Arrival: Tiefenbahn mit unbekanntem Ziel, ohne Fahrzeit vom Core 58 s", fu
     local e = setup()
     e.T:RideStart("tram", 0, 1000)
     eq(green(e), "Next station in 58 s", "58 s")
+end)
+
+test("Arrival: Greifenflug zeigt das Tempo mit Zwergenspruch unter der Flugzeit", function()
+    local e = setup({ ["flight:100020"] = 1, ["flighttime:100020"] = 150 })
+    e.speed = 14
+    e.T.api.GetUnitSpeed = function() return e.speed end
+    e.T.api.random = function() return 2 end
+    e.T:RideStart("flight", 100020, 1000)
+    eq(e.fonts[6].text, "Dwarf speedometer 46 km/h, hold on to your beard, it gets windy!", "Tempo und Spruch")
+    e.now = 1000.5; e.T:RideTick(e.now)
+    e.speed = 20
+    e.now = 1002; e.T:RideTick(e.now)
+    eq(e.fonts[6].text, "Dwarf speedometer 66 km/h, hold on to your beard, it gets windy!", "gleicher Spruch im Flug")
+    e.speed = 0
+    e.now = 1004; e.T:RideTick(e.now)
+    eq(e.fonts[6].text:find("66 km/h", 1, true) ~= nil, true, "ohne Tempo bleibt die Zeile")
+    e.T:RideEnd()
+    e.T:SetOpt("arrival", false)
+    e.speed = 14
+    e.T:RideStart("flight", 100020, 1000)
+    eq(green(e), "", "ohne Countdown"); eq(e.fonts[6].text ~= "", true, "Tempo trotzdem")
+    e.T:RideEnd()
+    e.T:SetOpt("flightSpeed", false)
+    e.T:RideStart("flight", 100020, 1000)
+    eq(e.T:CurrentRide(), nil, "Option aus")
 end)

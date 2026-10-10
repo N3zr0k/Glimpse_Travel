@@ -1,0 +1,5 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- PlayerSpeed.lua liest das Tempo, PlayerSpeedFrame.lua zeigt es am Spielerportrait. -->
+    <Script file="PlayerSpeed.lua"/>
+    <Script file="PlayerSpeedFrame.lua"/>
+</Ui>

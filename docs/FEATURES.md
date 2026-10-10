@@ -1,6 +1,6 @@
 # Glimpse: Travel – Funktionen
 
-Stand 0.3.14-alpha.1. Benötigt Glimpse (Core) 0.3.21 oder neuer.
+Stand 0.3.15-alpha.1. Benötigt Glimpse (Core) 0.3.21 oder neuer.
 
 ## Funktionen
 
@@ -16,6 +16,8 @@ Stand 0.3.14-alpha.1. Benötigt Glimpse (Core) 0.3.21 oder neuer.
 | Hinweise in der Tiefenbahn | Weiße Hinweise 1 s nach Abfahrt, bei 25, 42 und 75 % der Fahrt und bei Ankunft. Titel vor dem Doppelpunkt fett. | Hinweise (an) |
 | Warnungen in der Tiefenbahn | Bewegt man sich während der Fahrt, erscheint zufällig eine von sieben roten Sicherheitswarnungen, danach 20 s Pause. | Warnungen (an) |
 | Tempo der Tiefenbahn | Eigene Zeile „Gnomentacho“ in km/h oder mph (Entfernungseinheit des Core) mit Spruch je Tempostufe, ab 138 km/h wechselnde Sprüche. | Tempo (an) |
+| Tempo auf Greifenflügen | Eigene Zeile unter der Flugzeit mit dem gemessenen Tempo in km/h oder mph und einem Zwergenspruch (einer pro Flug). | Tempo Greifenflug (an) |
+| Eigenes Tempo am Portrait | Blaue Zahl rechts am Spielerportrait neben dem Namen: wie schnell du dich gerade bewegst, in km/h oder mph. Im Stand und im Kampf ausgeblendet. | Tempo am Portrait (an) |
 | `/gli travel` | Einstellungen, Taste, Reittiere, Klassenfertigkeiten, laufende Fahrt, letzte Doppelklicks. | – |
 
 ## Datenbank

@@ -3,4 +3,5 @@
     <Include file="TravelAction\TravelAction.xml"/>
     <Include file="FlightTime\FlightTime.xml"/>
     <Include file="Arrival\Arrival.xml"/>
+    <Include file="PlayerSpeed\PlayerSpeed.xml"/>
 </Ui>

@@ -31,9 +31,12 @@ Travel schreibt nichts in Glimpse: Database. Strecke, Zonen, Flugpunkte und Flug
 | `Modules/Arrival/ArrivalFrame.lua` | Weißer Hinweis, rote Warnung, grüner Countdown und Tempo oben in der Bildschirmmitte, Titel vor dem Doppelpunkt fett | – | `CreateFrame` |
 | `Modules/Arrival/ArrivalPoints.lua` | Hinweise der Tiefenbahn: 1 s nach Abfahrt, bei 25/42/75 % der Fahrzeit und bei Ankunft, je Fahrt einmal | – | – |
 | `Modules/Arrival/ArrivalWarnings.lua` | Rote Zufallswarnung bei Bewegung während der Tiefenbahn-Fahrt, mit Pause | – | – |
-| `Modules/Arrival/ArrivalSpeed.lua` | Tempo der Tiefenbahn in km/h oder mph (Entfernungseinheit des Core) als eigene Zeile, mit Spruch | – | `Travel:GetTramRide()` (Yards der laufenden Fahrt), `Glimpse:GetDistanceUnit()` |
+| `Modules/Arrival/ArrivalSpeed.lua` | Tempo der Tiefenbahn in km/h oder mph (Entfernungseinheit des Core) als eigene Zeile, mit Spruch; auf Greifenflügen das Tempo des Spielers mit Zwergenspruch | – | `Travel:GetTramRide()` (Yards der laufenden Fahrt), `Glimpse:GetDistanceUnit()` |
 | `Modules/Arrival/Arrival.lua` | Countdown für Tiefenbahn und Flugroute, Ton vor der Ankunft, Namen der Flugpunkte solange die Flugkarte offen ist | liest: `travel` (`flight`, `flighttime`, Scope `account`) | Nachrichten `GLIMPSE_TRAVEL_RIDE_START` (mit Fahrzeit)/`_END` vom Core, `C_Timer.NewTicker`/`After`, `PlaySound`, `C_Map.GetMapInfo`, Ereignis `PLAYER_STARTED_MOVING` |
 | `Commands/Commands.xml` | Lädt die Befehle | – | – |
+| `Modules/PlayerSpeed/PlayerSpeed.xml` | Lädt die Tempoanzeige | – | – |
+| `Modules/PlayerSpeed/PlayerSpeed.lua` | Aktuelles Tempo des Spielers in yd/s, geheime Werte im Kampf ergeben nichts | – | `GetUnitSpeed` |
+| `Modules/PlayerSpeed/PlayerSpeedFrame.lua` | Blaue Tempozahl am rechten Rand des Spielerportraits, alle 0,5 s, km/h oder mph je nach Entfernungseinheit des Core; im Stand und im Kampf leer | – | `PlayerFrame`, `UnitAffectingCombat`, `C_Timer.NewTicker`, `Glimpse:GetDistanceUnit()` |
 | `Commands/Travel.lua` | `/gli travel`: Einstellungen, Taste, Reittiere, Klassenfertigkeiten, laufende Fahrt mit Sekunden seit der Abfahrt, Log | – | `Glimpse:RegisterCommand` |
 | `LICENSE` | MIT-Lizenz | – | – |
 | `docs/icon.png` | Icon (512 x 512) für README und CurseForge | – | – |

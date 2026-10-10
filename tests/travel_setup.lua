@@ -6,7 +6,7 @@ local FILES = { "Core/Travel.lua", "Core/Options.lua", "Modules/TravelAction/Tra
     "Modules/TravelAction/TravelActionClass.lua", "Modules/TravelAction/TravelActionWater.lua", "Modules/TravelAction/TravelActionBoost.lua",
     "Modules/TravelAction/TravelAction.lua", "Modules/FlightTime/FlightTime.lua", "Modules/FlightTime/FlightTimeTooltip.lua",
     "Modules/Arrival/ArrivalFrame.lua", "Modules/Arrival/ArrivalPoints.lua", "Modules/Arrival/ArrivalWarnings.lua", "Modules/Arrival/ArrivalSpeed.lua",
-    "Modules/Arrival/Arrival.lua",
+    "Modules/Arrival/Arrival.lua", "Modules/PlayerSpeed/PlayerSpeed.lua", "Modules/PlayerSpeed/PlayerSpeedFrame.lua",
     "Commands/Travel.lua" }
 
 local SPELL_NAMES = { [783] = "Reisegestalt", [1066] = "Wassergestalt", [2645] = "Geisterwolf", [5118] = "Aspekt des Geparden", [2983] = "Sprinten", [8696] = "Sprinten", [1850] = "Spurt" }

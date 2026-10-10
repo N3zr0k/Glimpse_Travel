@@ -44,6 +44,12 @@ The Deeprun Tram gets a little extra:
 - red safety notices from the tram management when you walk around in the car
 - a gnome speedometer in km/h or mph
 
+## Your speed
+
+A blue number at the right edge of your portrait, next to your name, shows how fast you are moving, in km/h or mph. It is hidden while standing still and in combat.
+
+On gryphon flights, an extra line below the flight time shows the flight speed with a dwarven quip.
+
 ## Good to know
 
 - Everything can be switched on or off in the options (Glimpse options, tab *Travel*).
