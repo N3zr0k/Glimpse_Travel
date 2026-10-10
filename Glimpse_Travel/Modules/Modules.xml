@@ -1,0 +1,6 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- Je Erweiterung ein Ordner mit eigener XML. -->
+    <Include file="TravelAction\TravelAction.xml"/>
+    <Include file="FlightTime\FlightTime.xml"/>
+    <Include file="Arrival\Arrival.xml"/>
+</Ui>

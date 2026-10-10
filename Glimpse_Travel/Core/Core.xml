@@ -1,0 +1,5 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- Travel.lua legt das Modul an, Options.lua erweitert es nur. -->
+    <Script file="Travel.lua"/>
+    <Script file="Options.lua"/>
+</Ui>

@@ -1,0 +1,14 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+
+    <!-- 1. Texte -->
+    <Include file="Locales\Locales.xml"/>
+
+    <!-- 2. Modul, Einstellungen, Optionen -->
+    <Include file="Core\Core.xml"/>
+
+    <!-- 3. Erweiterungen (je eine ein Ordner) -->
+    <Include file="Modules\Modules.xml"/>
+
+    <!-- 4. Slash-Befehl -->
+    <Include file="Commands\Commands.xml"/>
+</Ui>

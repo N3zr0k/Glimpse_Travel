@@ -1,0 +1,8 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- Anzeige zuerst, dann Hinweise, Warnungen und Tempo der Tiefenbahn, Arrival.lua hört auf den Core. -->
+    <Script file="ArrivalFrame.lua"/>
+    <Script file="ArrivalPoints.lua"/>
+    <Script file="ArrivalWarnings.lua"/>
+    <Script file="ArrivalSpeed.lua"/>
+    <Script file="Arrival.lua"/>
+</Ui>

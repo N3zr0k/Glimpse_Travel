@@ -1,0 +1,5 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- FlightTime.lua liest die Zeiten, FlightTimeTooltip.lua zeigt sie an der Flugkarte. -->
+    <Script file="FlightTime.lua"/>
+    <Script file="FlightTimeTooltip.lua"/>
+</Ui>

@@ -1,0 +1,8 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- Helfer zuerst, TravelAction.lua entscheidet und meldet den Doppelklick an. -->
+    <Script file="TravelActionMount.lua"/>
+    <Script file="TravelActionClass.lua"/>
+    <Script file="TravelActionWater.lua"/>
+    <Script file="TravelActionBoost.lua"/>
+    <Script file="TravelAction.lua"/>
+</Ui>

@@ -1,0 +1,19 @@
+## Interface: 16001
+## Title: Glimpse: Travel
+## Notes: Comfort for travelling: mount, travel form and swim help with one double click.
+## Notes-deDE: Komfort beim Reisen: Reittier, Reisegestalt und Schwimmhilfe mit einem Doppelklick.
+
+## Version: 0.3.12-alpha.1
+## Author: N3zr0k
+## X-License: MIT
+## X-Website: https://github.com/N3zr0k/Glimpse_Travel
+## X-Repo: https://github.com/N3zr0k/Glimpse_Travel
+
+## X-Glimpse-MinVersion: 0.3.21
+## Dependencies: Glimpse
+## OptionalDeps: Glimpse_Database
+## Category: Tooltip
+## IconTexture: Interface\AddOns\Glimpse_Travel\Media\Icon
+
+# Main XML Loader
+Glimpse_Travel.xml
